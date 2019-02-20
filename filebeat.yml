@@ -1,0 +1,11 @@
+#filebeat.inputs:
+#- type: log
+#  enabled: true
+#  paths:
+#    - /var/log/apache/*
+filebeat.inputs:
+- type: log
+  paths:
+    - "/var/log/apache/*"
+output.logstash:
+  hosts: ["%%PLACEHOLDER%%:5044"]
